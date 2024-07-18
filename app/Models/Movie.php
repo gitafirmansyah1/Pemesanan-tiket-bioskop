@@ -11,5 +11,5 @@ class Movie extends Model
         'description',
         'poster',
         'time',
-    ];
+
 }

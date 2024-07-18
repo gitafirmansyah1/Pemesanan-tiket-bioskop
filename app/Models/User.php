@@ -20,16 +20,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role_id',
     ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var array<int, string>
+     * @var array <int, string>
      */
     protected $hidden = [
         'password',
         'remember_token',
+        'role_id',
     ];
 
     /**

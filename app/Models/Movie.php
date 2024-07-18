@@ -13,3 +13,4 @@ class Movie extends Model
         'poster',
         'time',
 
+

@@ -16,6 +16,13 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware('auth')->group(function(){
+    Route::resource('user',UserController::class)->middleware('isAdmin');
+    Route::resource('movies',MovieController::class)->middleware('isAdmin');
+    Route::resource('bookings',BookingController::class);
+    Route::resource('payment',PaymentController::class);
+    Route::resource('tickets',TicketsController::class);
+});
  tickets
 
 Route::middleware('auth')->group(function(){
@@ -28,4 +35,5 @@ Route::resource('movies',MovieController::class)->middleware('isAdmin');
 Route::resource('bookings',BookingController::class);
 });
 
+ main
  main
